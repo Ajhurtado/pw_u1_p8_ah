@@ -21,19 +21,22 @@ function sumaFinalParImpar(){
 
 //Para cambiar el color
 function identificarFilaColumna(){
+    num1 = '1x'+ numeroColumna;
+    num2 = '2x'+ numeroColumna;
     numeroFila = document.getElementById('Fila').value;
     numeroColumna = document.getElementById('Columna').value;
    // let fila = document.getElementById('1x' + numeroFila);
   //  let columna = document.getElementById(numeroColumna + 'x1');
     let suma = sumarFilaColumna();
-    if (suma % 2 == 0){
-        console.log("La suma de filas y columnas es par")
-//        document.getElementById('1x' + numeroFila).innerHTML = "<button>0</button>";
-        document.getElementById('1x' + numeroColumna).innerHTML = "<button>0</button>";
+    if (suma % 2 == 0 && num1){
+       numeroCero = document.getElementById(num1).innerHTML = "<button>0</button>";
+       
     }
-    else{
-        console.log("La suma de filas y columnas es impar")
-        document.getElementById('1x' + numeroColumna ).innerHTML = "<button>X</button>";
+    
+    
+    if (suma % 2 != 0){
+        numeroX = document.getElementById('1x' + numeroColumna ).innerHTML = "<button>X</button>";
+       
     }
 
 }
